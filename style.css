@@ -75,10 +75,30 @@ body{
     border-radius: 6px;
     cursor: pointer;
 }
+.explore_text{
+    font-size: 30px;
+    margin: 50px 0 25px;
+    text-align: center;
+}
+.food_card_image{
+    width: 100%;
+}
+.food_img{
+    width: 100%;
+}
+.food_card{
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.food_card_description{
+    padding: 15px;
+}
 @media (min-width: 768px){
     .navbar{
         justify-content: space-between;
-        padding:10px 30px
+        padding:0px 30px
 
     }
     .landing{
@@ -93,6 +113,18 @@ body{
         top: -30px;
         right: 0;
         z-index:-1;
+    }
+    .menu_list{
+        margin-top: 40px;
+        display:flex;
+        gap: 15px;
+    }
+    .food_card:nth-child(2){
+        margin: -20px 0 30px;
+    }
+    .explore_view_more{
+        display: flex;
+        justify-content: center
     }
     
 } 
@@ -120,6 +152,32 @@ body{
     .navbar_items{
         font-size: 16px;
         padding:12px 20px; 
+    }
+    .explore_menu_container{
+        margin-top: 90px;
+        position:relative;
+    }
+    .explore_bg{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+        );
+        z-index:-3;
+        transform: skewY(-5deg);
+    }
+    .explore_text{
+        font-size:40px;
+    }
+    .menu_list{
+        padding: 0 30px;
+        gap:40px;
     }
 }
 @media(min-width: 1400px){
