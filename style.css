@@ -10,9 +10,11 @@ body{
 }
 .navbar{
     display:flex;
-    justify-content: space-around;
     align-items: center;
     background-color: #fff;
+    box-shadow: 0 25px 50px -12px rgba(0 0 0 / 25%);
+    border-radius: 0 0 20px 20px;
+    padding: 0 30px;
 }
 .navbar_brand{
     width: 100px;
@@ -29,12 +31,48 @@ body{
   );
     color:#fff;
     border: none;
-    padding: 8px 16px;
+    padding: 8px 14px;
     border-radius: 6px;
     cursor: pointer;
 }
-.navbar_items:hover{
-
+.container{
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    
+}
+.landing{
+    margin-top: 10px;
+}
+.landing_image_container{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.landing_image{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0 0 0 / 25%);
+}
+.pattern_1, .pattern_2{
+    display: none
+}
+.description{
+    font-size: 28px;
+    margin: 20px 0;
+}
+.btn_primary{
+    background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+    color:#fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 @media (min-width: 768px){
     .navbar{
@@ -42,14 +80,53 @@ body{
         padding:10px 30px
 
     }
+    .landing{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .pattern_1,.pattern_2{
+        display:inline-block;
+        position: absolute;
+        top: -30px;
+        right: 0;
+        z-index:-1;
+    }
+    
 } 
 @media (min-width: 1020px){
     .navbar_brand{
-        width: 150px;
+        width: 100px;
     }
+    .btn_primary{
+        padding:15px;
+        font-size: 18px;
+    }
+    .container{
+        max-width: 900px;
+    }
+    .landing_description{
+        width: 100%
+    }
+    .description{
+        font-size: 50px;
+    }
+    .navbar{
+        padding:0px 30px;
+    }
+    
     .navbar_items{
-        padding:20px;
-        font-size: 20px;
+        font-size: 16px;
+        padding:12px 20px; 
     }
-
+}
+@media(min-width: 1400px){
+    .container{
+        max-width:1250px;
+    }
+    .description{
+        line-height: 1;
+    }
+    
 }
